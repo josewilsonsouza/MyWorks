@@ -4,7 +4,6 @@ library(Benchmarking)
 library(writexl)
 library(readxl)
 
-
 data <- read_excel("Dados/PAINEL_GERAL.xlsx", sheet = "DADOS")
 data$MÊS <- as.numeric(gsub("/",'',data$MÊS))
 
@@ -49,4 +48,4 @@ dea.plot(x,y,RTS="add",ORIENTATION="in-out",txt=rownames(x),main="add")
 
 View(df_completo)
 
-#write_xlsx(df_completo, "ARTIGO - STICKY COSTS - BASE//Analise_DEA_2024.xlsx")
+#write_xlsx(df_completo, "Resultados//Analise_DEA_2024.xlsx")
