@@ -9,7 +9,7 @@ library(Benchmarking)
 library(writexl)
 library(readxl)
 
-data <- read_excel("OTHERS/Dados_Artigo_Rayse.xlsx", sheet = "DADOS")
+data <- read_excel("Dados.xlsx", sheet = "DADOS")
 df = data[, c('CODIGO', 'MUNICIPIO', 'POP', 'VAI_pc', 'VAS_pc', 'VAA_pc', 'ARR_pc','FPM_pc',
               'PIB_pc','GD','GAP')]
 
@@ -30,4 +30,4 @@ res_ef <- mutate(df,
 
 View(res_ef)
 
-write_xlsx(res_ef, "OTHERS/Analise_DEA.xlsx")
+write_xlsx(res_ef, "Resultados/Analise_DEA.xlsx")
